@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Encryption and Decryption</title>
+</head>
+<body>
+    <input type="file" id="fileInput">
+    <button id="encryptButton">Encrypt</button>
+    <button id="decryptButton">Decrypt</button>
+    <a id="downloadLink" style="display: none;">Download Encrypted File</a>
+
+    <script>
+        document.getElementById('encryptButton').addEventListener('click', async function () {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file to encrypt.');
+                return;
+            }
+
+            // Your encryption key (must be the same as the decryption key)
+            const encryptionKey = abc123; //'your_secret_key';
+
+            // Read the file as an ArrayBuffer
+            const fileArrayBuffer = await readFileAsArrayBuffer(file);
+
+            // Encrypt the file
+            const encryptedData = await encryptWithAES(fileArrayBuffer, encryptionKey);
+
+            // Create a Blob from the encrypted data
+            const blob = new Blob([new Uint8Array(encryptedData)], { type: 'application/octet-stream' });
+
+            // Create a download link
+            const downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = 'encrypted_file';
+
+            // Show the download link
+            downloadLink.style.display = 'block';
+
+            // Handle the encrypted data as needed
+            console.log('Encrypted data:', encryptedData);
+        });
+
+        // ... (The decryption part remains the same as in the previous code)
+
+        async function readFileAsArrayBuffer(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    resolve(reader.result);
+                };
+                reader.onerror = reject;
+                reader.readAsArrayBuffer(file);
+            });
+        }
+
+        async function encryptWithAES(data, key) {
+            // ... (The encryption part remains the same as in the previous code)
+        }
+
+        // ... (The decryption function remains the same as in the previous code)
+    </script>
+</body>
+</html>
