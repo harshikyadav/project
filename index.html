@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
+    <link
+      rel="shortcut icon"
+      href="./pages/Dashboard/assets/favicon.svg"
+      type="image/x-icon"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>LockBox</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <div class="logo">
+          <p>LockBox</p>
+        </div>
+
+        <div class="buttons">
+          <a href="#contact" class="button contact">Contact</a>
+          <a href="./master/index.html" class="button get-started"
+            >Dashboard</a
+          >
+        </div>
+        
+        <div class="mobile-menu">
+          <div class="open-close">
+            <img
+              src="./images/menu.svg"
+              alt="Abrir"
+              class="open"
+              onclick="Menu.open()"
+            />
+            <img
+              src="./images/close.svg"
+              alt="fechar"
+              class="close"
+              onclick="Menu.close()"
+            />
+
+            <div class="logo-menu">
+              <img src="./images/logo.svg" alt="" />
+              <p>Lockbox</p>
+            </div>
+          </div>
+          <div class="menu">
+            <div class="menu-open">
+              <div class="menu-items">
+                <ul>
+                  <li><a href="./index.html" onclick="Menu.close()">Home</a></li>
+                  <li><a href="#contact" onclick="Menu.close()">Contact</a></li>
+                  <li>
+                    <a
+                      href="./master/index.html"
+                      onclick="Menu.close()"
+                      >Get Started</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-content">
+        <div class="header-content-left">
+          <h1>Protect your files from prying eyes,</h1>
+          <p>
+            with military-grade encryption.
+          </p>
+          <a href="./master/index.html" class="button get-started"
+            >Go to Dashboard</a
+          >
+        </div>
+
+        <div class="header-content-right">
+          <img src="./images/teamin.svg" alt="Team image" />
+        </div>
+      </div>
+    </header>
+    <!--END OF HEADER-------------------- -->
+
+    <main id="preview">
+      <section class="app-preview container">
+        <div class="app-preview-left">
+          <img src="./images/laptop.svg" alt="App image" />
+        </div>
+
+        <div class="app-preview-right">
+          <h2 class="section-title">Protect your data with our layered encryption technology</h2>
+          <p class="section-paragraph">
+            Add an extra layer of protection to your data with our file encryption service
+          </p>
+          <div class="get-started-line">
+            <a href="./master/index.html" class="get-started"
+              >Get Started</a
+            >
+            <div class="green-line"></div>
+          </div>
+        </div>
+      </section>
+      <!--END OF app-preview container SECTION-------------------- -->
+
+      <section class="track-your-spending container" id="track">
+        <div class="track-your-spending-left">
+          <h2 class="section-title">Symmetric key cryptography: </h2>
+          <p class="section-paragraph">
+            The trusted way to protect your data
+          </p>
+          <div class="get-started-line">
+            <a href="./master/index.html" class="get-started"
+              >Get Started</a
+            >
+            <div class="green-line"></div>
+          </div>
+        </div>
+
+        <div class="track-your-spending-right">
+          <img src="./images/publiclll.svg" alt="image" />
+        </div>
+      </section>
+      <!--END OF track-your-spending SECTION-------------------- -->
+
+      <section id="contact" class="get-in-touch container">
+        <div class="get-in-touch-content">
+          <div class="get-in-touch-left">
+            <h2 class="section-title">Get in touch with us.</h2>
+          </div>
+          <div class="get-in-touch-right">
+            <a
+              href="https://www.linkedin.com/in/harshik-yadav/"
+              class="button get-started"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--END OF get-in-touch SECTION-------------------- -->
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-card">
+          <h3>Our mission</h3>
+          <a href="./index.html">Home</a>
+          <a href="#preview">Preview</a>
+          <a href="#track">Symmetrickey cryptography</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-card">
+          <h3>About</h3>
+          <a href="https://github.com/harshikyadav" target="_blank">harshik-yadav</a>
+          
+        </div>
+        <div class="footer-card">
+          <h3>Quick Links</h3>
+          <a href="./index.html">Home</a>
+          <a href="#preview">Preview</a>
+          <a href="#track">Symmetrickey cryptography</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-card">
+          <h3>Get in touch</h3>
+          <div class="social">
+            <a
+              href="https://www.linkedin.com/in/harshik-yadav/"
+              target="_blank"
+              id="linkedin"
+              ><i data-feather="linkedin"></i
+            ><pre>Harshik</pre></a>
+
+
+            <!-- dikhsa-->
+            <a
+            href="https://www.linkedin.com/in/diksha-chaturvedi-443a62236/"
+            target="_blank"
+            id="linkedin"
+            ><i data-feather="linkedin"></i
+          ><pre>Diksha</pre></a>
+          <!-- ayushi -->
+          <a
+              href="https://www.linkedin.com/in/ayushi-tiwari-1488b821b/"
+              target="_blank"
+              id="linkedin"
+              ><i data-feather="linkedin"></i
+            ><pre>Ayushi</pre></a>
+          <!-- prateek -->
+          <a
+              href="https://www.linkedin.com/in/pratteek-gupta/"
+              target="_blank"
+              id="linkedin"
+              ><i data-feather="linkedin"></i
+            ><pre>prateek</pre></a>
+          <!-- manish -->
+          <a
+              href="https://www.linkedin.com/in/manish-pratap-singh-29623b255/"
+              target="_blank"
+              id="linkedin"
+              ><i data-feather="linkedin"></i
+            ><pre>Manish</pre></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--END OF FOOTER-------------------- -->
+
+    <!--LOADING SCREEN-->
+    <div class="loader-overlay">
+      <div class="loader"></div>  
+    </div>
+    
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="scrollReveal.js"></script>
+    <script src="home.js"></script>
+    <script>
+      feather.replace();
+    </script>
+
+  <script>
+    // ==== LOADING SCREEN
+    let spinner = document.querySelector('.loader-overlay');
+
+    window.addEventListener('load', () => {
+      spinner.parentElement.removeChild(spinner);
+    })
+  </script>
+  </body>
+</html>
